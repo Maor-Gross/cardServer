@@ -6,7 +6,9 @@ const corsmiddleware = cors({
     "http://localhost:5500",
     "https://www.cardsproject.co.il",
     "https://full-stack-z4c4.onrender.com"
-  ],
+  ], methods: ['GET', 'POST', 'PUT', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
 });
 
 module.exports = corsmiddleware;
