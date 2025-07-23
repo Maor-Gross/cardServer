@@ -105,9 +105,14 @@ router.put("/:id", auth, async (req, res) => {
       return createError("Validation", validationErrorMessage, 400);
     }
 
+    console.log("req.body:", req.body.bizNumber);
+    console.log("originalCardFromDB:", originalCardFromDB.bizNumber);
+
+
     if (
       Number(req.body.bizNumber) !== originalCardFromDB.bizNumber &&
       !userInfo.isAdmin
+
     ) {
       return createError(
         "Authorization",
