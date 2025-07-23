@@ -106,7 +106,7 @@ router.put("/:id", auth, async (req, res) => {
     }
 
     if (
-      req.body.bizNumber !== originalCardFromDB.bizNumber &&
+      Number(req.body.bizNumber) !== originalCardFromDB.bizNumber &&
       !userInfo.isAdmin
     ) {
       return createError(
