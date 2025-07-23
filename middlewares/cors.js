@@ -6,7 +6,7 @@ const corsmiddleware = cors({
     "http://localhost:5173",
     "https://www.cardsproject.co.il",
     "https://full-stack-z4c4.onrender.com"
-  ], methods: ['GET', 'POST', 'PUT', 'OPTIONS'],
+  ], methods: ['GET', 'POST', 'PUT', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', `x-auth-token`],
   credentials: true,
 });
