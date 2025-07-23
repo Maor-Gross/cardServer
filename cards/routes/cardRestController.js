@@ -88,7 +88,7 @@ router.get("/:id", async (req, res) => {
 router.put("/:id", auth, async (req, res) => {
   try {
     const { id } = req.params;
-
+    console.log(req.body);
     let userInfo = req.user;
     const originalCardFromDB = await getCard(id);
     if (!userInfo.isAdmin && userInfo._id != originalCardFromDB.user_id) {
